@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="card-profiles">
+
+    <ion-card *ngIf="!auth.authenticated()">
+      
+<button ion-button block click()>Login</button>
+  
+  </ion-card>
+
+  <ion-content padding *ngIf="auth.authenticated()">
+  
+  <ion-card>
+
+    <ion-item *ngIf="auth.user">
+      <ion-avatar item-left>
+        <img src="{{ auth.user.picture }}">
+      </ion-avatar>
+      <h2>{{ auth.user.nickname }}</h2>
+      <p>{{ auth.user.email }}</p>
+    </ion-item>
+
+    <ion-item>
+          <ion-card-content>
+        <ion-item>Badges</ion-item>
+      </ion-card-content>
+  
+      <ion-card-content>
+        <ion-item>Social Media/Stats </ion-item>
+      </ion-card-content>
+      
+      </ion-item>
+  
+  </ion-card>
+  
+  <button ion-button block (click)="auth.logout()">Logout</button>
+  
+</ion-content>
+
+  </div>
+
+</ion-content>

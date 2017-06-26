@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Menu
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div id="large-button">
+  <ion-grid>
+    <ion-row>
+      <ion-col width-50 height-30><button (click)=buttonGoTo(homePage) ion-button color='slategray' block large_button>Parks</button> </ion-col>
+      <ion-col width-50 height-30><button (click)=buttonGoTo(contactPage) ion-button color='slategray' block large_button>Housing</button> </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-50 height-30><button [navPush]="homePage" ion-button color='slategray' block default>Streets</button> </ion-col>
+      <ion-col width-50 height-30><button [navPush]="homePage" ion-button color='slategray' block default>Retail</button> </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col width-50 height-30><button [navPush]="homePage" ion-button color='slategray' block default>Entertainment</button> </ion-col>
+      <ion-col width-50 height-30><button (click)=buttonGoTo(mainPage) ion-button color='slategray' block default>Sign Out</button> </ion-col>
+    </ion-row>
+  </ion-grid> 
+  
+  </div> 
+  
+</ion-content>

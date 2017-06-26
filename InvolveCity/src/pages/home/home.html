@@ -1,0 +1,40 @@
+
+<ion-header>
+  <ion-navbar hideBackButton="true">
+    <ion-title has-header="true">
+    </ion-title>
+      <!--<button (click)="showAlert()" id="bott-chip-no"><ion-icon name="help-circle"></ion-icon></button>-->
+      SWITY
+      <button right (click)="showMore()" id="bott-chip-no"><ion-icon name="more"></ion-icon></button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home">
+  
+  <div id="chip-ion-mod">
+    <ion-chip>
+      <ion-label color="light"><h4>Would you want this in your City?</h4></ion-label>
+    </ion-chip>
+  </div>
+  
+  <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(false)" (throwoutright)="voteUp(true)" id="card-stack">
+    <ion-card #mycards1 swing-card *ngFor="let c of cards">
+      <img [src]="c.image_url">
+    </ion-card>
+  
+    
+    <div id="bott-chip-no">
+      <ion-chip>
+        <button (click)="voteUp(false)"><h6>No</h6></button>
+      </ion-chip>
+    </div>
+
+    <div id="bott-chip-yes">
+      <ion-chip>
+        <button (click)="voteUp(true)"><h6>Yes</h6></button>
+      </ion-chip>
+    </div>  
+  
+    
+  </div>
+</ion-content>

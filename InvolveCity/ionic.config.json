@@ -1,0 +1,11 @@
+{
+  "name": "InvolveCity",
+  "app_id": "involvecity",
+  "proxies": [
+    {
+      "path": "/api",
+      "proxyUrl": "https://ancient-forest-34366.herokuapp.com"
+    }
+  ],
+  "type": "ionic-angular"
+}

@@ -1,0 +1,34 @@
+<!--
+  Generated template for the MainPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+	<ion-navbar>
+		<ion-title>WELCOME!</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content class="main-page">
+	<div id="login-image">
+	</div>
+	<div id="signup-login">
+		<form [formGroup]="loginForm" (submit)="loginUser()" novalidate>
+			<ion-item>
+				<ion-input #email formControlName="email" type="email" (change)="elementChanged(email)" placeholder="Your email address" [class.invalid]="!loginForm.controls.email.valid && (emailChanged || submitAttempt)"></ion-input>
+			</ion-item>
+			<ion-item>
+				<ion-input #password formControlName="password" type="password" (change)="elementChanged(password)" placeholder="Your password" [class.invalid]="!loginForm.controls.password.valid && (passwordChanged || submitAttempt)"></ion-input>
+			</ion-item>
+			<!--<ion-item class="error-message" *ngIf="!loginForm.controls.password.valid && (passwordChanged || submitAttempt)" color="danger"></ion-item>-->
+			<button ion-button block center (click)="createAccount()" color="light" id="signButton">Sign Up</button>
+			<button ion-button block center type="submit" color="light" id="logButton">Log In</button>
+		</form>
+	</div>
+	<div id="login-page">
+		<button ion-button center (click)="guestLogin()"><ion-icon left no-padding name="facebook"></ion-icon>Log in as Guest</button>
+		<!--<button ion-button center (click)="googleLogin()" color="danger"><ion-icon left no-padding name="google"></ion-icon>Log in with Google</button>
+		-->
+	</div>
+</ion-content>

@@ -1,0 +1,75 @@
+page-home {
+    #home {
+        background: lightgray;
+    }
+
+    #card-stack {
+        overflow: visible !important;
+        border: 0px !important;
+        border-bottom-color: transparent !important;
+        border-bottom: none !important;
+    }
+ 
+    #card-stack ion-card {
+        border: none !important;
+        border-color: #fff !important;
+        border-bottom-color: transparent !important;
+        border-bottom: none !important;
+        box-shadow: none;
+        position: fixed;
+        max-height: 97vh !important;
+        max-width: 100vw !important;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        right: 0;
+        top: 05vh;
+        border-radius: 0;
+        z-index: -100;
+    }
+
+    #chip-ion-mod ion-chip {
+        background-blend-mode: darken;
+        position: absolute;
+        text-anchor: middle-alignment;
+        text-orientation: center;
+        text-align: center;
+        height: 60px;
+        margin: 0;
+        right: 0;
+        left: 0;
+        border-radius: 0px;
+        z-index: 100;
+    }
+
+    #bott-chip-no ion-chip {
+        -webkit-text-fill-color: white;
+        background-color:red;
+        background-blend-mode: 25% multiply;
+        position: absolute;
+        text-anchor: middle-alignment;
+        text-orientation: center;
+        text-align: center;
+        left: 1px;
+        height: 50px;
+        margin-top: 90%;
+        border-radius: 50%;
+        z-index: 100;       
+    }
+
+    #bott-chip-yes ion-chip {
+        -webkit-text-fill-color: white;
+        background-color: green;
+        background-blend-mode: 25% multiply;
+        position: absolute;
+        text-anchor: middle-alignment;
+        text-orientation: center;
+        text-justify: right;
+        text-align: center;
+        right: 1px;
+        height: 50px;
+        margin-top: 90%;
+        border-radius: 50%;
+        z-index: 100;
+    }
+}
